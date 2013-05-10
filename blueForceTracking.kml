@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="artilery">
+		<IconStyle>
+			<Icon>
+				<href>arty-blue.png</href>
+			</Icon>
+		</IconStyle>
+    	</Style>
+	<Style id="cavilery">
+		<IconStyle>
+			<Icon>
+				<href>cav-blue.png</href>
+			</Icon>
+		</IconStyle>
+    	</Style>
+	<name>Blue Force Tracking</name>
+    	<description>Latest Blue force Tracking</description>
+    	<Placemark>
+      		<name>Device 001</name>
+      		<description>Test description</description>
+		<styleUrl>#artilery</styleUrl>
+      		<Point>
+        		<coordinates>-75.822508,40.258069,86</coordinates>
+      		</Point>
+    	</Placemark>
+    	<Placemark>
+      		<name>Device 002</name>
+      		<description>Test description</description>
+		<styleUrl>#artilery</styleUrl>
+      		<Point>
+        		<coordinates>-75.823329,40.258548,86</coordinates>
+      		</Point>
+    	</Placemark>
+    	<Placemark>
+      		<name>Device 003</name>
+      		<description>Test description</description>
+		<styleUrl>#artilery</styleUrl>
+      		<Point>
+        		<coordinates>-75.821516,40.258262,86</coordinates>
+      		</Point>
+    	</Placemark>
+    	<Placemark>
+      		<name>Device 004</name>
+      		<description>Test description</description>
+		<styleUrl>#cavilery</styleUrl>
+      		<Point>
+        		<coordinates>-75.821446,40.257689,86</coordinates>
+      		</Point>
+    	</Placemark>
+    	<Placemark>
+      		<name>Device 005</name>
+      		<description>Test description</description>
+		<styleUrl>#cavilery</styleUrl>
+      		<Point>
+        		<coordinates>-75.823984,40.259211,86</coordinates>
+      		</Point>
+    	</Placemark>
+    	<Placemark>
+      		<name>Device 006</name>
+      		<description>Test description</description>
+		<styleUrl>#cavilery</styleUrl>
+      		<Point>
+        		<coordinates>-75.822015,40.258941,86</coordinates>
+      		</Point>
+    	</Placemark>
+      	<Placemark>
+      		<name>Device 007</name>
+      		<description>Test description</description>
+		<styleUrl>#artilery</styleUrl>
+      		<Point>
+        		<coordinates>-75.822154,40.259412,86</coordinates>
+      		</Point>
+    	</Placemark>
+       	<Placemark>
+      		<name>Device 008</name>
+      		<description>Test description</description>
+		<styleUrl>#artilery</styleUrl>
+      		<Point>
+        		<coordinates>-75.823742,40.259764,86</coordinates>
+      		</Point>
+    	</Placemark>   	
+  </Document>
+</kml>

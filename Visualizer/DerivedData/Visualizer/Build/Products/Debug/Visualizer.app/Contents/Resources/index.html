@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Maps with Cocoa</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAANyK-jDL9MQDfnwC6TSYi6hTWZ0W4Bdl5r0fXOPtsrbE46yGHsBSGWqWZs_8YJXd_5I6R_H8y68u3hQ"
+            type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+    function getParam( name )
+	{
+		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		var regexS = "[\\?&]" + name + "=([^&#]*)";
+		var regex = new RegExp(regexS);
+		var results = regex.exec(window.location.href);
+		if(results == null)
+			return null;
+		else
+			return results[1];
+	}
+    </script>
+  </head>
+ 
+ <!-- <body onload="initialize()" style="width:100%;height:100%"> -->
+ <body style="width:863px; height:662px">
+    <div id="map_area" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0"></div> 
+	<script type="text/javascript">
+		var lat = getParam('lat');
+		if(lat != null)
+			lat = parseFloat(lat);
+		
+		var lon = getParam('lon');
+		if(lon != null)
+			lon = parseFloat(lon);
+			
+		var zoom = getParam('zoom');
+		if(zoom != null)
+			zoom = parseInt(zoom);
+		
+		if(lat == null || lon == null)
+		{
+			// We'll just hard code this to some value to be in Palo Alto, home of Google
+			lat = 37.442024;
+			lon = -122.142738;
+		}
+		if (zoom == null) 
+		{
+			zoom = 17;
+		}
+		
+	    var map = new GMap2(document.getElementById("map_area"));
+	    map.setCenter(new GLatLng(lat, lon), zoom);
+		map.disableDoubleClickZoom(); 
+		GEvent.addListener(map, "moveend", function(){
+			if (MapView) {
+				MapView.mapMoveEnd();
+			}
+		});
+		GEvent.addListener(map, "movestart", function(){
+			if (MapView){
+				MapView.mapMoveStart();
+			}
+		});
+		GEvent.addListener(map,"click", function(overlay,latlng) {     
+      		if (latlng) {   
+				//alert(latlng.lat() + ", " + latlng.lng());
+				var tempLat = latlng.lat();
+				var tempLng = latlng.lng();
+				//MapView.mapClicked_(tempLat);
+				MapView.mapClickedLatitude_(tempLat);
+				MapView.mapClickedLongitude_(tempLng);
+      		}
+    	});
+	</script>
+  </body>
+</html>
