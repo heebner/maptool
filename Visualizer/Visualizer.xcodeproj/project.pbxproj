@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430BBBD7173DFD4D00CC3EB7 /* KMLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C883BFF1151AEAFB001CCE65 /* KMLParser.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		430BBBD8173DFE7A00CC3EB7 /* KMLParser.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C883BFF1151AEAFB001CCE65 /* KMLParser.framework */; };
 		C8672C2B1517FCEF00458FD3 /* accesspts.csv in Resources */ = {isa = PBXBuildFile; fileRef = C8672C291517FCEF00458FD3 /* accesspts.csv */; };
 		C8672C2C1517FCEF00458FD3 /* signalsample.csv in Resources */ = {isa = PBXBuildFile; fileRef = C8672C2A1517FCEF00458FD3 /* signalsample.csv */; };
 		C8672C341518009100458FD3 /* SignalSample.m in Sources */ = {isa = PBXBuildFile; fileRef = C8672C331518009100458FD3 /* SignalSample.m */; };
 		C871F2A71519B57D00DAF0C8 /* AccessPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C871F2A61519B57D00DAF0C8 /* AccessPoint.m */; };
-		C883BFF2151AEAFB001CCE65 /* KMLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C883BFF1151AEAFB001CCE65 /* KMLParser.framework */; };
 		C883BFF4151AEB03001CCE65 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C883BFF3151AEB03001CCE65 /* CorePlot.framework */; };
 		C883BFF5151AEB05001CCE65 /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C883BFF3151AEB03001CCE65 /* CorePlot.framework */; };
-		C883BFF6151AEB07001CCE65 /* KMLParser.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C883BFF1151AEAFB001CCE65 /* KMLParser.framework */; };
 		C8F2DEF515140523008C98E4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F2DEF415140523008C98E4 /* Cocoa.framework */; };
 		C8F2DEFF15140523008C98E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8F2DEFD15140523008C98E4 /* InfoPlist.strings */; };
 		C8F2DF0115140523008C98E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F2DF0015140523008C98E4 /* main.m */; };
@@ -111,7 +111,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C883BFF5151AEB05001CCE65 /* CorePlot.framework in CopyFiles */,
-				C883BFF6151AEB07001CCE65 /* KMLParser.framework in CopyFiles */,
+				430BBBD8173DFE7A00CC3EB7 /* KMLParser.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C883BFF4151AEB03001CCE65 /* CorePlot.framework in Frameworks */,
-				C883BFF2151AEAFB001CCE65 /* KMLParser.framework in Frameworks */,
+				430BBBD7173DFD4D00CC3EB7 /* KMLParser.framework in Frameworks */,
 				C8F2DF1715140553008C98E4 /* QuartzCore.framework in Frameworks */,
 				C8F2DF1515140543008C98E4 /* WebKit.framework in Frameworks */,
 				C8F2DEF515140523008C98E4 /* Cocoa.framework in Frameworks */,
@@ -770,7 +770,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Visualizer/Visualizer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
@@ -786,7 +789,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Visualizer/Visualizer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";

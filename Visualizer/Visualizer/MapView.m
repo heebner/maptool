@@ -41,7 +41,7 @@ NSString * const MapLoadedNotification = @"MapLoaded";
 		NSInteger startingLat = [defaults integerForKey:PrefStartingLatitude];
 		NSInteger startingLong = [defaults integerForKey:PrefStartingLongitude];
 		NSInteger zoom = [defaults integerForKey:PrefMapZoom];
-		urlToLoad = [[NSString alloc] initWithFormat:@"http://www.heebnerd.com/maps/index.html?lat=%l&lon=%l&zoom=%l", 
+		urlToLoad = [[NSString alloc] initWithFormat:@"http://www.oxfordhaus.com/map.html?lat=%l&lon=%l&zoom=%l", 
 							   startingLat, startingLong, zoom];
 	}
 	else 
